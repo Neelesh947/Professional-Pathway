@@ -1,0 +1,12 @@
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+spring.datasource.url=jdbc:mysql://localhost/naukri
+spring.datasource.username=root
+spring.datasource.password=mysql
+
+#to perform crud operation on Mysql databases
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+
+#Change port
+server.port=8083
+

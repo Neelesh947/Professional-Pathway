@@ -1,0 +1,39 @@
+package com.user.service.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.user.service.model.User;
+import com.user.service.service.UserService;
+
+@Controller
+@RequestMapping("/user")
+public class UserController {
+	
+	@Autowired
+	private UserService userService;
+	
+	//create user
+	@PostMapping("/")
+	public ResponseEntity<User> createUser(@RequestBody User user) throws Exception
+	{
+		User user1=this.userService.createUser(user);
+		return ResponseEntity.status(HttpStatus.CREATED).body(user1);
+	}
+	
+	//get all user
+	
+	public ResponseEntity<List<User>> getAllUser()
+	{
+		List<User> user=this.userService.getallUser();
+		return ResponseEntity.status(HttpStatus.OK).body(user);
+	}
+
+}

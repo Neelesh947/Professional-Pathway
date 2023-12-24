@@ -1,0 +1,5 @@
+package com.recruiter.service.serviceImpl;
+
+public class UserServiceImpl {
+
+}

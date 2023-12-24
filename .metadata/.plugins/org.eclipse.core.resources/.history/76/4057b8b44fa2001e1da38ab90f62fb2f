@@ -1,0 +1,5 @@
+package com.recruiter.service.model;
+
+public class Job {
+
+}

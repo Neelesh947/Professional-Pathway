@@ -1,0 +1,13 @@
+package com.post.service.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+
+import com.post.service.service.JobService;
+
+@Controller
+public class JobController {
+
+	@Autowired
+	private JobService jobService;
+}

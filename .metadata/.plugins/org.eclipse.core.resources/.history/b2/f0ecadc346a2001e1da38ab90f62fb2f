@@ -1,0 +1,27 @@
+package com.post.service.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.post.service.model.Job;
+import com.post.service.service.JobService;
+
+@Controller
+@RequestMapping("/jobpost")
+public class JobController {
+
+	@Autowired
+	private JobService jobService;
+	
+	//create Job Post
+	@PostMapping("/")
+	public ResponseEntity<Job> createJobPost(@RequestBody Job job)
+	{
+		Job jobpost=this.jobService.createJobPost(job);
+		return null;
+	}
+}

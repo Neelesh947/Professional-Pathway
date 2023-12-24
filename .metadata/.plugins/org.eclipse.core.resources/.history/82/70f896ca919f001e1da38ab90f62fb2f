@@ -1,0 +1,5 @@
+package com.recruiter.service.service;
+
+public interface UserService {
+
+}

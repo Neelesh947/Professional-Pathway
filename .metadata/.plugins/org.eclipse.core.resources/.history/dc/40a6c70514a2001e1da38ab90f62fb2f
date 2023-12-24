@@ -1,0 +1,13 @@
+package com.user.service.model;
+
+import javax.persistence.Entity;
+
+@Entity
+public class User {
+	
+	private String userId;
+	private String firstName;
+	private String lastName;
+	private String fullName;
+	
+}

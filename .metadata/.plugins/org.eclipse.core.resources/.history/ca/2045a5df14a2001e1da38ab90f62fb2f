@@ -1,0 +1,16 @@
+package com.user.service.service;
+
+import com.user.service.model.User;
+
+public interface UserService {
+
+	//create user
+	User createUser(User user);
+	
+	//get user
+	
+	
+	//get user by userid
+	
+	
+}

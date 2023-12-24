@@ -1,0 +1,5 @@
+package com.recruiter.service.repository;
+
+public interface UserRepository {
+
+}

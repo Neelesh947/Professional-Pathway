@@ -1,0 +1,14 @@
+package com.post.service.serviceImpl;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.post.service.repository.JobRepository;
+import com.post.service.service.JobService;
+
+@Service
+public class JobServiceImpl implements JobService{
+
+	@Autowired
+	private JobRepository jobRepository;
+}

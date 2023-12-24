@@ -1,0 +1,5 @@
+package com.post.service.model;
+
+public class Job {
+
+}

@@ -1,0 +1,18 @@
+package com.user.service.service;
+
+import java.util.List;
+
+import com.user.service.model.User;
+
+public interface UserService {
+
+	//create user
+	User createUser(User user);
+	
+	//get user
+	List<User>  getallUser(); 
+	
+	//get user by userid
+	User getUserByUserId(String userId);
+	
+}
