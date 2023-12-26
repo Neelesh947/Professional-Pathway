@@ -77,14 +77,14 @@ public class UserServiceImpl implements UserService{
 		
 		//fetch rating of the above user from JOB SERVICE
 		//localhost:8083/jobpost/recruiter/17da614e-6fa1-4c92-8d22-c5e61cea7c31
-		Job[] jobPostByRecruiter= restTemplate.getForObject("http://localhost:8083/jobpost/recruiter/"+user.getId(), Job[].class);
+		Job[] jobPostByRecruiter= restTemplate.getForObject("http://JOB-SERVICE/jobpost/recruiter/"+user.getId(), Job[].class);
 //		log.info("{} ",jobPostByRecruiter);
 		List<Job> Jobs= Arrays.stream(jobPostByRecruiter).toList();
 			
 		List<Job> appliedUsers=Jobs.stream().map(users->{
 			//api  to call the get the applied user
 			//http://localhost:8082/user/69019d1c-2dfe-407d-929f-501432ea06f8
-			ResponseEntity<AppliedUsers> applieduserList= restTemplate.getForEntity("http://localhost:8082/user/69019d1c-2dfe-407d-929f-501432ea06f8",AppliedUsers.class);
+			ResponseEntity<AppliedUsers> applieduserList= restTemplate.getForEntity("http://USER-SERVICE/user/"+users.getUserId(),AppliedUsers.class);
 			AppliedUsers ausers=applieduserList.getBody();
 			
 			//set the applied user to the job posts			
