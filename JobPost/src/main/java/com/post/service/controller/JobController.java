@@ -41,7 +41,7 @@ public class JobController {
 	
 	//get job by jobID
 	@GetMapping("/{jobId}")
-	public ResponseEntity<Job> getJobsByJobId(@PathVariable String jobid)
+	public ResponseEntity<Job> getJobsByJobId(@PathVariable("jobId") String jobid)
 	{
 		Job job=this.jobService.getJobByJobId(jobid);
 		return ResponseEntity.status(HttpStatus.OK).body(job);

@@ -1,9 +1,0 @@
-package com.recruiter.service.service;
-
-import com.recruiter.service.model.User;
-
-public interface UserService {
-	
-	//create users
-	public User createUser(User user) throws Exception;
-}

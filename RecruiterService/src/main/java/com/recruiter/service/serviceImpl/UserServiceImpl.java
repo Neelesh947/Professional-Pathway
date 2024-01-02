@@ -87,8 +87,14 @@ public class UserServiceImpl implements UserService{
 			ResponseEntity<AppliedUsers> applieduserList= restTemplate.getForEntity("http://USER-SERVICE/user/"+users.getUserId(),AppliedUsers.class);
 			AppliedUsers ausers=applieduserList.getBody();
 			
+			
+//			ResponseEntity<AppliedUsers[]> applieduserList= restTemplate.getForEntity("http://USER-SERVICE/user/"+users.getUserId(),AppliedUsers[].class);
+//			AppliedUsers[] ausers=applieduserList.getBody();
+						
 			//set the applied user to the job posts			
 			users.setUsers(ausers);
+			
+			//users.setUsers(Arrays.asList(ausers));
 			
 			//return the jobpost
 			return users;

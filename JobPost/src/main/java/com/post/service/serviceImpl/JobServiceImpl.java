@@ -20,9 +20,6 @@ public class JobServiceImpl implements JobService{
 	public Job createJobPost(Job job) {
 		// TODO Auto-generated method stub
 		
-		String uuid=UUID.randomUUID().toString();
-		job.setJobId(uuid);
-				
 		Job jobpost=this.jobRepository.save(job);
 		return jobpost;
 	}
