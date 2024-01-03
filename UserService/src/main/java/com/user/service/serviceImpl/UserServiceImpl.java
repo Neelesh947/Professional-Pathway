@@ -28,7 +28,7 @@ public class UserServiceImpl implements UserService{
 		
 		user.setFullName(fullName);
 		
-		User existUser=this.userRepository.findByUserName(user.getUserName());
+		User existUser=this.userRepository.findByUsername(user.getUsername());
 		
 		if(existUser !=null)
 		{
