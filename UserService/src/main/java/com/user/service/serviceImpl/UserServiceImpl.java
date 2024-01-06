@@ -24,7 +24,7 @@ public class UserServiceImpl implements UserService{
 		
 		String fname=user.getFirstName();
 		String lname=user.getLastName();
-		String fullName=fname.concat("").concat(lname);
+		String fullName=fname.concat(" ").concat(lname);
 		
 		user.setFullName(fullName);
 		

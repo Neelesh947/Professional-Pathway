@@ -1,6 +1,8 @@
 package com.user.service.model;
 
+
 import java.util.Collection;
+import java.util.Collections;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -26,7 +28,7 @@ public class User implements UserDetails{
 	private String lastName;
 	private String fullName;
 	private String email;
-	private String userName;
+	private String username;
 	private String password;
 	private String address;
 	private String phone;
@@ -36,28 +38,24 @@ public class User implements UserDetails{
 		return null;
 	}
 	@Override
-	public String getUsername() {
-		// TODO Auto-generated method stub
-		return userName;
-	}
-	@Override
 	public boolean isAccountNonExpired() {
 		// TODO Auto-generated method stub
-		return false;
+		return true;
 	}
 	@Override
 	public boolean isAccountNonLocked() {
 		// TODO Auto-generated method stub
-		return false;
+		return true;
 	}
 	@Override
 	public boolean isCredentialsNonExpired() {
 		// TODO Auto-generated method stub
-		return false;
+		return true;
 	}
 	@Override
 	public boolean isEnabled() {
 		// TODO Auto-generated method stub
-		return false;
-	}	
+		return true;
+	}
+
 }

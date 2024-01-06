@@ -1,9 +1,0 @@
-package com.post.service.service;
-
-import com.post.service.model.Job;
-
-public interface JobService {
-
-	Job createJobPost(Job job);
-
-}

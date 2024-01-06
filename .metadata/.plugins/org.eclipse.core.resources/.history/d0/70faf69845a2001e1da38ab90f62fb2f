@@ -1,7 +1,0 @@
-package com.post.service.serviceImpl;
-
-import com.post.service.service.JobService;
-
-public class JobServiceImpl implements JobService{
-
-}

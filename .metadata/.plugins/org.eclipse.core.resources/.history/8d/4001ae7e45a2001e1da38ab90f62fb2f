@@ -1,5 +1,0 @@
-package com.post.service.repository;
-
-public interface JobRepository {
-
-}

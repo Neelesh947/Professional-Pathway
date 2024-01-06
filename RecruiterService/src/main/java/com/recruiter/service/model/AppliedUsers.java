@@ -16,7 +16,7 @@ public class AppliedUsers {
 	private String lastName;
 	private String fullName;
 	private String email;
-	private String userName;
+	private String username;
 	private String password;
 	private String address;
 	private String phone;
