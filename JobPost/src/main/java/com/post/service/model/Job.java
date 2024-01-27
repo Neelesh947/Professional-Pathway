@@ -30,4 +30,5 @@ public class Job {
 	private String postDate;
 	private String recruiterId;
 	private String userId;
+	private String noOfPost;
 }
