@@ -1,5 +1,7 @@
 package com.post.service.serviceImpl;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.UUID;
 
@@ -19,6 +21,17 @@ public class JobServiceImpl implements JobService{
 	@Override
 	public Job createJobPost(Job job) {
 		// TODO Auto-generated method stub
+		LocalDate currentdate=LocalDate.now();
+		
+		 DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+
+	        // Format the current date as a string using the defined format
+	        String formattedDate = currentdate.format(formatter);
+	        
+	        job.setPostDate(formattedDate);
+	        
+	        String uuid=UUID.randomUUID().toString();
+	        job.setJobId(uuid);
 		
 		Job jobpost=this.jobRepository.save(job);
 		return jobpost;
