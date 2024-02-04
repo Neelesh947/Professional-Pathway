@@ -21,4 +21,8 @@ public interface JobService {
 	//get all by recruiter
 	List<Job> getListByrecruiterId(String recruiterId);
 
+	Job updateJobs(Job job, String jobId);
+
+
+
 }

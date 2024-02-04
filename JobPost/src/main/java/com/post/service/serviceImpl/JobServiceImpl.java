@@ -69,4 +69,11 @@ public class JobServiceImpl implements JobService{
 		return this.jobRepository.findByRecruiterId(recruiterId);
 	}
 
+	@Override
+	public Job updateJobs(Job job, String jobId) {
+		// TODO Auto-generated method stub
+		job.setJobId(jobId);
+		return this.jobRepository.save(job);
+	}
+
 }

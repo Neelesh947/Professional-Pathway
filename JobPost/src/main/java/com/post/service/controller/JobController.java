@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -71,5 +72,18 @@ public class JobController {
 	{
 		List<Job> list=this.jobService.getListByrecruiterId(recruiterId);
 		return ResponseEntity.status(HttpStatus.OK).body(list);
+	}
+	
+	
+	@PutMapping("/job/{jobId}")
+	public ResponseEntity<Job> updatePostJobs(@PathVariable String jobId, @RequestBody Job job)
+	{
+		Job existingjob=this.jobService.getJobByJobId(jobId);
+		if(existingjob==null)
+		{
+			 return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+		}	
+		Job jobs=this.jobService.updateJobs(job, jobId);
+		return ResponseEntity.status(HttpStatus.OK).body(jobs);
 	}
 }
