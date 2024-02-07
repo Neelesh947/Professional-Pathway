@@ -32,9 +32,9 @@ public class MySecurityConfig extends WebSecurityConfigurerAdapter{
 
 	@Bean
 	public PasswordEncoder passwordEncoder() {
-		return NoOpPasswordEncoder.getInstance();		
-	}
-	
+	        return NoOpPasswordEncoder.getInstance();
+	} 
+		
 	@Bean
 	public AuthenticationManager authenticationManagerBean() throws Exception {
         return super.authenticationManagerBean();

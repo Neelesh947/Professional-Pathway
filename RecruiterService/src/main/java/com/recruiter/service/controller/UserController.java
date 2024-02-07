@@ -47,7 +47,4 @@ public class UserController {
 		Recruiter user=this.userService.getUserByUserId(id);		
 		return ResponseEntity.status(HttpStatus.OK).body(user);
 	}
-	
-	
-
 }

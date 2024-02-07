@@ -60,12 +60,10 @@ public class UserServiceImpl implements UserService{
 	
 	
 	// get all user
-	@Override
 	public List<Recruiter> getAllUser() {
 		// TODO Auto-generated method stub
 		
-		List<Recruiter> user=this.userRepository.findAll();
-		
+		List<Recruiter> user=this.userRepository.findAll();		
 		return user;
 	}
 

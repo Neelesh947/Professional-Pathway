@@ -86,4 +86,7 @@ public class JobController {
 		Job jobs=this.jobService.updateJobs(job, jobId);
 		return ResponseEntity.status(HttpStatus.OK).body(jobs);
 	}
+	
+	
+	
 }
